@@ -369,17 +369,7 @@ section:nth-child(odd) {
     text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
 }
 
-.section-title::before {
-    content: '{';
-    color: #22c55e;
-    margin-right: 0.5rem;
-}
 
-.section-title::after {
-    content: '}';
-    color: #22c55e;
-    margin-left: 0.5rem;
-}
 
 /* About Section */
 .about {
@@ -994,7 +984,7 @@ section:nth-child(odd) {
 .modal-content {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
     margin: 5% auto;
-    padding: 0;
+    padding: 2rem;
     border-radius: 12px;
     border: 2px solid #22c55e;
     width: 90%;
@@ -1002,6 +992,36 @@ section:nth-child(odd) {
     max-height: 80vh;
     overflow-y: auto;
     box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+    color: #e2e8f0;
+}
+
+.modal-content h2 {
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-content ul {
+    color: #cbd5e1;
+    margin-left: 1rem;
+}
+
+.modal-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 @keyframes slideUp {
@@ -1045,12 +1065,14 @@ section:nth-child(odd) {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
         padding: 2rem 0;
+        border-bottom: 1px solid rgba(34, 197, 94, 0.3);
     }
 
     .nav-menu.active {
